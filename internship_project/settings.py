@@ -11,7 +11,8 @@ DEBUG = config("DEBUG", default=False, cast=bool)
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "django-internship-assignment.onrender.com",  # your live URL
+    "django-internship-assignment-production.up.railway.app"
+# your live URL
 ]
 
 # Application definition
