@@ -1,14 +1,18 @@
 import dj_database_url
 from pathlib import Path
 from decouple import config
-
+import os
 # Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Load secret values from .env
 SECRET_KEY = config("SECRET_KEY")
 DEBUG = config("DEBUG", default=False, cast=bool)
-ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="127.0.0.1,localhost").split(",")
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "django-internship-assignment.onrender.com",  # your live URL
+]
 
 # Application definition
 INSTALLED_APPS = [
